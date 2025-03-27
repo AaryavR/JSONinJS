@@ -1,0 +1,23 @@
+<html>
+
+<body>
+    <h1 id="p"></h1>
+
+    <script>
+        async function add(a,b) {
+            let response = await a+b
+            display(response)
+        }
+
+        function display(s) {
+            document.getElementById("p").innerHTML = s
+        }
+
+        add(432432, 9843239842)
+
+    </script>
+
+</body>
+
+
+</html>
