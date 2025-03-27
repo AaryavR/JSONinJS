@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>JSON in JS</title>
+    </head>
+
+    <body>
+        <p id="pluh"></p>
+
+        <script>
+            var o = {name: "Bob", age: "123"}
+            var j = JSON.stringify(o)
+            var neo = JSON.parse(j)
+
+            document.getElementById("pluh").innerHTML = neo.name
+
+        </script>
+
+    </body>
+
+</html>
