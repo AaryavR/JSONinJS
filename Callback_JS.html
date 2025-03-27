@@ -1,0 +1,26 @@
+<html> 
+    <head>
+        <title>Callback in JS</title>
+    </head>
+
+    <body>
+        <p id="p"></p>
+
+        <script>
+            function myDisplay(value) {
+                document.getElementById("p").innerHTML = value;
+            }
+
+            function calc(a, b, myCallback) {
+                var add = a + b;
+                myCallback(add);
+            }
+
+            calc(12, 123, myDisplay);
+
+        </script>
+
+    </body>
+
+
+</html>
