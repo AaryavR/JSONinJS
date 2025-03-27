@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Promises in JS</title>
+    </head>
+
+    <body>
+        <h1 id="d"></h1>
+
+        <script>
+
+            function dis(s){
+                document.getElementById("d").innerHTML = s;
+            };
+
+            function sum(a, b) {
+                var sum = a + b;
+                dis(sum);
+            };
+
+            let myP = new Promise(function(myResolve, myReject) {
+                let x = 0;
+
+                if (x==0){
+                    myResolve ("Ok");
+                }
+                else {
+                    myReject ("error");
+                }
+            });
+
+            myP.then (
+                function(value) {sum(5, 5)},
+                function(error) {sum(error)}
+            );
+
+        </script>
+
+    </body>
+
+</html>
