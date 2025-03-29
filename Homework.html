@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Async Await Example</title>
+    </head>
+    <body>
+        <h2>Async/Await Example</h2>
+        <button onclick="fetchData()">Get User Data</button>
+        <p id="output">Click the button to fetch data...</p>
+
+        <script>
+            function getUserData() {
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        resolve("User: John Doe, Age: 25");
+                    }, 2000);
+                });
+            }
+
+            async function fetchData() {
+                document.getElementById("output").innerText = "Fetching data...";
+                const data = await getUserData(); 
+                document.getElementById("output").innerText = data;
+            }
+        </script>
+    </body>
+</html>
